@@ -1,17 +1,7 @@
-from django.http import HttpResponse
-from django.views.generic import CreateView, ListView
+from django.views.generic import TemplateView
+from django.shortcuts import render
 
-from .models import Product
 
 # Create your views here.
-def home(request):
-    return HttpResponse("Olá, estamos começando a construção do WebApp Quitanda da Dona Maria!")
-
-
-class CreateProductView(CreateView):
-    model = Product
-    fields = ['barcode', 'name', 'description', 'price']
-
-class ListProductView(ListView):
-    model = Product
-    context_object_name = 'products'
+class HomeTemplateView(TemplateView):
+    template_name = 'website/home.html'

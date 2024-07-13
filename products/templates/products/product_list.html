@@ -1,3 +1,6 @@
+{% extends 'website/base.html' %}
+{% block content %}
+<a href="{% url 'products:create' %}">Adicionar produto</a>
 <style>
     table {
         font-family: Arial, sans-serif;
@@ -25,7 +28,7 @@
         </tr>
         {% for product in products %}
         <tr>
-            <td>{{ product.barcode }}</td>
+            <td><a href="{% url 'products:detail' pk=product.id %}">{{ product.barcode }}</a></td>
             <td>{{ product.name }}</td>
             <td>{{ product.description }}</td>
             <td>{{ product.price }}</td>
@@ -33,3 +36,4 @@
         {% endfor %}
     </tbody>
 </table>
+{% endblock  %}
