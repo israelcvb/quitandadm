@@ -1,10 +1,11 @@
 {% extends 'website/base.html' %}
 
+{% block title %}Detalhes{% endblock  %}
+
 {% block content %}
-<a href="{% url 'products:list' %}">Listar produtos</a>
-<a href="{% url 'products:update' pk=product.id %}">Editar produto</a><br><br>
+<h1>Produto: {{ product.name }}</h1>
 Código de barras: {{ product.barcode }}<br>
-Nome: {{ product.name }}<br>
 Descrição: {{ product.description }}<br>
 Preço: R$ {{ product.price }}<br>
+<a href="{% url 'products:update' pk=product.id %}">Editar produto</a><br><br>
 {% endblock  %}

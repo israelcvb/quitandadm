@@ -9,4 +9,5 @@ urlpatterns = [
     path('news/', views.ProductCreateView.as_view(), name='create'),
     path('detail/<int:pk>/', views.ProductDetailView.as_view(), name='detail'),
     path('update/<int:pk>', views.ProductUpdateView.as_view(), name='update'),
+    path('search/', views.search_form, name='search'),
 ]

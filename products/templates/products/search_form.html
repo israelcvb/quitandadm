@@ -1,0 +1,12 @@
+{% extends 'website/base.html' %}
+
+{% block title %}Buscar produto{% endblock  %}
+
+{% block content %}
+<h1>Buscar produto</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ sform.as_div }}
+    <button type="submit">Buscar</button>
+</form>
+{% endblock  %}

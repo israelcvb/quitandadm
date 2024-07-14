@@ -4,13 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}QuitandaDM{% endblock %}</title>
+    <title>QuitandaDM - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'website/css/base.css' %}">
     {% block styles %}{% endblock %}
 </head>
 <body>
-    <nav>
-        <a href="{% url 'website:home' %}">Home</a>
+    <nav class="hnavbar">
+        <ul>
+            <li><a href="{% url 'website:home' %}">Página inicial</a></li>
+            <li><a href="{% url 'products:list' %}">Produtos</a></li>
+            <li><a href="#">Vendas</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Fornecedores</a></li>
+            <li><a href="#">Estoque</a></li>
+            <li style="float:right"><a href="#">Sobre</a></li>
+        </ul>
     </nav>
-    {% block content %}{% endblock  %}
+    <nav class="vnavbar">
+        {% block vnavbar %}{% endblock  %}
+    </nav>
+    <div style="padding:20px;margin-left:210px;margin-top:30px">
+        {% block content %}{% endblock  %}
+    </div>
 </body>
 </html>

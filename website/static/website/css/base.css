@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+.hnavbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.hnavbar li {
+    float: left;
+}
+
+.hnavbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.hnavbar li a:hover {
+    background-color: #111;
+}
+
+.vnavbar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    margin-top: 17px;
+    left: 0px;
+    background-color: #333;
+    overflow-x: hidden;
+}
+
+.vnavbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.vnavbar li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 14px 16px;
+}
+
+.vnavbar li a:hover {
+    background-color: #111;
+}

@@ -1,6 +1,15 @@
 {% extends 'website/base.html' %}
+
+{% block title %}Produtos{% endblock  %}
+
+{% block vnavbar %}
+<ul>
+    <li><a href="{% url 'products:search' %}">Buscar produto</a></li>
+    <li><a href="{% url 'products:create' %}">Adicionar produto</a></li>
+</ul>
+{% endblock  %}
 {% block content %}
-<a href="{% url 'products:create' %}">Adicionar produto</a>
+<h1>Lista de produtos</h1>
 <style>
     table {
         font-family: Arial, sans-serif;
