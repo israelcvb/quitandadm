@@ -1,0 +1,10 @@
+{% block vnavbar %}
+  <ul>
+    <li>
+      <a href="{% url 'products:search' %}">Buscar produto</a>
+    </li>
+    <li>
+      <a href="{% url 'products:create' %}">Adicionar produto</a>
+    </li>
+  </ul>
+{% endblock %}

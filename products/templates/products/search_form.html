@@ -2,11 +2,15 @@
 
 {% block title %}Buscar produto{% endblock  %}
 
+{% block vnavbar %}
+    {% include 'products/product_nav.html' %}
+{% endblock  %}
+
 {% block content %}
 <h1>Buscar produto</h1>
-<form action="" method="post">
+<form class="search" action="" method="post">
     {% csrf_token %}
-    {{ sform.as_div }}
+    {{ sform.as_div }}<br>
     <button type="submit">Buscar</button>
 </form>
 {% endblock  %}

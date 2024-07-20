@@ -2,6 +2,10 @@
 
 {% block title %}Detalhes{% endblock  %}
 
+{% block vnavbar %}
+    {% include 'products/product_nav.html' %}
+{% endblock  %}
+
 {% block content %}
 <h1>Produto: {{ product.name }}</h1>
 Código de barras: {{ product.barcode }}<br>

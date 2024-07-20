@@ -3,10 +3,7 @@
 {% block title %}Produtos{% endblock  %}
 
 {% block vnavbar %}
-<ul>
-    <li><a href="{% url 'products:search' %}">Buscar produto</a></li>
-    <li><a href="{% url 'products:create' %}">Adicionar produto</a></li>
-</ul>
+    {% include 'products/product_nav.html' %}
 {% endblock  %}
 {% block content %}
 <h1>Lista de produtos</h1>
